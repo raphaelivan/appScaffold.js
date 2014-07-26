@@ -1,46 +1,46 @@
 #!/usr/bin/env node
+;(function () {
+  var
+      fs = require('fs')
 
-var
-    fs = require('fs')
+    , directories = [
+        'app'
+      , 'app/controllers'
+      , 'app/models'
+      , 'app/views'
+      , 'assets'
+      , 'assets/images'
+      , 'assets/stylesheets'
+      , 'config'
+      , 'lib'
+    ]
 
-  , directories = [
-      'app'
-    , 'app/controllers'
-    , 'app/models'
-    , 'app/views'
-    , 'assets'
-    , 'assets/images'
-    , 'assets/stylesheets'
-    , 'config'
-    , 'test'
-    , 'lib'
-  ]
-
-  , files = [
-      'app.js'
-    , 'README.md'
-    , 'package.json'
-    , 'config/routes.js'
-    , 'config/database.js'
-  ];
+    , files = [
+        'app.js'
+      , 'README.md'
+      , 'package.json'
+      , 'config/routes.js'
+      , 'config/database.js'
+    ];
 
 
-function run () {
-  directories.forEach(function( dir ) {
-    fs.mkdir(dir, { mode: 0777 }, function( e )  {
-          if ( !e ) {
-            console.log( dir );
-          }
+  function run () {
+    directories.forEach(function( dir ) {
+      fs.mkdir(dir, { mode: 0777 }, function( e )  {
+            if ( !e ) {
+              console.log( dir );
+            }
+      });
+    }) ;
+
+    files.forEach(function( file )  {
+      fs.writeFile(file, '', { mode: 0777 }, function( e ) {
+        if ( !e ) {
+          console.log( file );
+        }
+      });
     });
-  }) ;
+  }
 
-  files.forEach(function( file )  {
-    fs.writeFile(file, '', { mode: 0777 }, function( e ) {
-      if ( !e ) {
-        console.log( file );
-      }
-    });
-  });
-}
-
-exports.run = run;
+  exports.run = run;
+})();
