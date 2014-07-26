@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 ;(function () {
   var
-      fs = require('fs')
+      fs  = require('fs')
+    , log = require('pretty-log')
 
     , directories = [
         'app'
@@ -25,18 +26,18 @@
 
 
   function run () {
-    directories.forEach(function( dir ) {
-      fs.mkdir(dir, { mode: 0777 }, function( e )  {
-            if ( !e ) {
-              console.log( dir );
+    directories.forEach(function (dir) {
+      fs.mkdir(dir, { mode: 0777 }, function (d) {
+            if (!d) {
+              log.success(dir);
             }
       });
     }) ;
 
-    files.forEach(function( file )  {
-      fs.writeFile(file, '', { mode: 0777 }, function( e ) {
-        if ( !e ) {
-          console.log( file );
+    files.forEach(function (file)  {
+      fs.writeFile(file, '', { mode: 0777 }, function(f) {
+        if (!f) {
+          log.success(file);
         }
       });
     });
