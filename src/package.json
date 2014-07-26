@@ -3,24 +3,20 @@
   "name": "appscaffold",
   "description": "Creates a directory structure for applications using NodeJS",
   "version": "0.0.2",
-
   "repository": {
     "url": "https://github.com/raphaelivan/appScaffold.js"
   },
-
   "main": "./lib/scaffold",
-
   "keywords": [
     "scaffold",
     "structure"
   ],
-
   "bin": {
     "appscaffold": "./bin/appscaffold"
   },
-
-  "dependencies": {},
-
+  "dependencies": {
+    "pretty-log": "^0.1.0"
+  },
   "engines": {
     "node": "*"
   }
