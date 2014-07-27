@@ -2,7 +2,7 @@
   "author": "Raphael Ivan",
   "name": "appscaffold",
   "description": "Creates a directory structure for applications using NodeJS",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "repository": {
     "url": "https://github.com/raphaelivan/appScaffold.js"
   },
