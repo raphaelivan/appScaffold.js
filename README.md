@@ -4,7 +4,7 @@ Allows you to create simply a directory structure to organize your files in appl
 [![NPM](https://nodei.co/npm/appscaffold.png)](https://nodei.co/npm/appscaffold/)
 
 ## Structure
-![structure](http://oi44.tinypic.com/2a9vggj.jpg)
+![structure](http://i60.tinypic.com/11tu15d.png)
 
 
 ## Installation
